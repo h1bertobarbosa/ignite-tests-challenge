@@ -6,7 +6,7 @@ let inMemoryUsersRepository: InMemoryUsersRepository;
 let createUserUseCase: CreateUserUseCase;
 let showUserProfileUseCase: ShowUserProfileUseCase;
 
-describe("Show User", () => {
+describe("Test - Show User", () => {
   beforeAll(async () => {
     inMemoryUsersRepository = new InMemoryUsersRepository();
     createUserUseCase = new CreateUserUseCase(inMemoryUsersRepository);

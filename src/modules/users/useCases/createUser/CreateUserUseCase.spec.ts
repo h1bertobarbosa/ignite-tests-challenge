@@ -5,13 +5,13 @@ import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
 let inMemoryUsersRepository: InMemoryUsersRepository;
 let createUserUseCase: CreateUserUseCase;
 
-describe("Create User", () => {
+describe("Test - Create User", () => {
   beforeEach(() => {
     inMemoryUsersRepository = new InMemoryUsersRepository();
     createUserUseCase = new CreateUserUseCase(inMemoryUsersRepository);
   });
 
-  it("Should be able create new user", async () => {
+  it("Should be able to create a new user", async () => {
     const user = await createUserUseCase.execute({
       name: "Test User",
       email: "test@test.com",
